@@ -2,6 +2,7 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   <head>
+    <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(53392057, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/53392057" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 
     <!-- Non social metatags -->
     <meta charset="utf-8">
@@ -22,6 +23,14 @@
     {% else %}
       {% include social-metatags.html %}
     {% endif %}
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
@@ -55,25 +64,27 @@
 
     <section class="page-header">
       <h1 class="project-name">{{ page-title }}</h1>
+      {% if page-tagline %}
       <h2 class="project-tagline">{{ page-tagline }}</h2>
+      {% endif %}
       {% if page.layout == 'home' and site.github.is_project_page %}
           <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-        {% if site.show_downloads %}
-          <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-          <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-        {% endif %}
       {% endif %}
+
+      <span style="margin-bottom: 10px;">
+        {% for tag in page.tags %}
+          {% capture tag_name %}{{ tag }}{% endcapture %}
+          <a href="/tags.html#{{ tag_name }}"><code class="tag"><nobr>{{ tag_name }}</nobr></code></a>&nbsp;
+        {% endfor %}
+      </span>
+
       <!-- Post tagline -->
       {% if page.layout == 'post' %}
         <h2 class="project-date">
         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-          {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
+          {% assign date_format = site.cayman-blog.date_format | default: "%d %b %Y" %}
           {{ page.date | date: date_format }}
         </time>
-        {% assign page_author = page.author | default: site.author | default: nil | escape %}
-        {% if page_author %}
-          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page_author }}</span></span>
-        {% endif %}
         </h2>
       {% endif %}
       <!-- End: Post tagline -->
@@ -84,6 +95,11 @@
       {{ content }}
 
       <footer class="site-footer">
+      <center>
+        <p>© Шепрут Илья. Все материалы на этом сайте распространяются под лицензией <a href="https://creativecommons.org/licenses/by/3.0/deed.ru">CC-BY</a>.</p>
+      <table style="border: 0px; table-layout: fixed; width: 100%;">
+        <tr><td style="border: 0px; padding: 0.2rem;">
+        <center>
         <!-- SVG icons from https://iconmonstr.com -->
 
         <!-- Github icon -->
@@ -100,6 +116,34 @@
           </a>
         </span>
 
+        <!-- VK icon -->
+        <span class="my-span-icon">
+          <a href="https://vk.com/{{ site.vk.group }}" aria-label="{{ site.github.owner_name }}'s VK group" title="{{ site.github.owner_name }}'s VK group">
+            <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.344 16.163h-1.867c-1.055 0-1.232-.601-2.102-1.469-.785-.785-1.22-.183-1.202.935.006.297-.141.534-.495.534-1.105 0-2.694.156-4.304-1.58-1.647-1.779-3.374-5.348-3.374-5.699 0-.208.172-.301.459-.301h1.898c.503 0 .545.249.686.568.584 1.331 1.981 4.002 2.354 2.511.214-.856.301-2.839-.615-3.01-.52-.096.396-.652 1.722-.652.33 0 .688.035 1.054.12.673.156.676.458.666.898-.034 1.666-.235 2.786.204 3.069.419.271 1.521-1.502 2.104-2.871.159-.378.191-.632.643-.632h2.322c1.216 0-.159 1.748-1.21 3.112-.847 1.099-.802 1.12.183 2.034.701.651 1.53 1.54 1.53 2.043 0 .238-.186.39-.656.39z"/></svg>
+          </a>
+        </span>
+
+        <!-- VK icon -->
+        <span class="my-span-icon">
+          <a href="https://vk.com/{{ site.vk.user }}" aria-label="{{ site.github.owner_name }}'s VK group" title="{{ site.github.owner_name }}'s VK group">
+            <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.581 15.997c.304 0 .429-.204.425-.458-.016-.958.356-1.474 1.03-.802.744.744.896 1.26 1.801 1.26h1.601c.403 0 .562-.13.562-.334 0-.432-.711-1.194-1.312-1.752-.844-.783-.882-.802-.156-1.744.9-1.169 2.079-2.667 1.037-2.667h-1.991c-.387 0-.414.217-.551.542-.498 1.173-1.443 2.693-1.803 2.461-.377-.243-.204-1.203-.175-2.63.008-.377.006-.636-.571-.77-.314-.073-.621-.103-.903-.103-1.137 0-1.922.477-1.477.56.785.146.711 1.846.527 2.58-.319 1.278-1.518-1.012-2.018-2.152-.12-.275-.155-.488-.586-.488h-1.627c-.247 0-.394.08-.394.258 0 .301 1.479 3.36 2.892 4.885 1.379 1.487 2.742 1.354 3.689 1.354z"/></svg>
+          </a>
+        </span>
+
+        <!-- klavogonki.ru icon -->
+        <span class="my-span-icon">
+          <a href="https://klavogonki.ru/u/#/{{ site.klavogonki.user }}" aria-label="{{ site.github.owner_name }}'s klavogonki profile" title="{{ site.github.owner_name }}'s klavogonki profile">
+            <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.5 7c.276 0 .5.224.5.5v.511c0 .793-.926.989-1.616.989l-1.086-2h2.202zm-1.441 3.506c.639 1.186.946 2.252.946 3.666 0 1.37-.397 2.533-1.005 3.981v1.847c0 .552-.448 1-1 1h-1.5c-.552 0-1-.448-1-1v-1h-13v1c0 .552-.448 1-1 1h-1.5c-.552 0-1-.448-1-1v-1.847c-.608-1.448-1.005-2.611-1.005-3.981 0-1.414.307-2.48.946-3.666.829-1.537 1.851-3.453 2.93-5.252.828-1.382 1.262-1.707 2.278-1.889 1.532-.275 2.918-.365 4.851-.365s3.319.09 4.851.365c1.016.182 1.45.507 2.278 1.889 1.079 1.799 2.101 3.715 2.93 5.252zm-16.059 2.994c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5.672 1.5 1.5 1.5 1.5-.672 1.5-1.5zm10 1c0-.276-.224-.5-.5-.5h-7c-.276 0-.5.224-.5.5s.224.5.5.5h7c.276 0 .5-.224.5-.5zm2.941-5.527s-.74-1.826-1.631-3.142c-.202-.298-.515-.502-.869-.566-1.511-.272-2.835-.359-4.441-.359s-2.93.087-4.441.359c-.354.063-.667.267-.869.566-.891 1.315-1.631 3.142-1.631 3.142 1.64.313 4.309.497 6.941.497s5.301-.184 6.941-.497zm2.059 4.527c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5.672 1.5 1.5 1.5 1.5-.672 1.5-1.5zm-18.298-6.5h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2z"/></svg>
+          </a>
+        </span>
+
+        <!-- YouTube icon -->
+        <span class="my-span-icon">
+          <a href="https://klavogonki.ru/u/#/{{ site.klavogonki.user }}" aria-label="{{ site.github.owner_name }}'s klavogonki profile" title="{{ site.github.owner_name }}'s klavogonki profile">
+            <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+          </a>
+        </span>
+
         <!-- RSS icon -->
         {% if site.gems contains "jekyll-feed" %}
           <span class="my-span-icon">
@@ -110,6 +154,7 @@
         {% endif %}
         <!-- Contact icon -->
         {% assign about_page = site.pages | where: "path", "about.md" | first %}
+        {% assign repos_page = site.pages | where: "path", "repos.md" | first %}
         {% if about_page.title %}
           <span class="my-span-icon">
             <a href="{{ about_page.url | relative_url }}" aria-label="Contact" title="Contact {{ site.github.owner_name }}">
@@ -117,20 +162,13 @@
             </a>
           </span>
         {% endif %}
-
+        </center>
+        </td><td style="border: 0px; padding: 0.2rem;">
+        <!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=53392057&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/53392057/1_0_35B977FF_159957FF_1_pageviews" style="width:80px; height:15px; border:0; border-radius: 0px; margin-top: -4px; max-height: 100%; max-width: 100%;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" class="ym-advanced-informer" data-cid="53392057" data-lang="ru" /></a> <!-- /Yandex.Metrika informer -->
+        </td></tr>
+        </table>
+        </center>
       </footer>
     </section>
-
-    {% if site.google_analytics %}
-      <script type="text/javascript">
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', '{{ site.google_analytics }}', 'auto');
-        ga('send', 'pageview');
-      </script>
-    {% endif %}
   </body>
 </html>

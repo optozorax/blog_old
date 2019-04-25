@@ -6,7 +6,7 @@ layout: default
 
   {{ content }}
 
-  <h2>Latest Posts</h2>
+  <h2>Последние публикации</h2>
 
   <div>&nbsp;</div>
 
@@ -21,9 +21,14 @@ layout: default
           <a class="post-link" href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
         </h2>
 
+        {% if post.description %}
+        <span>{{ post.description | markdownify }}</span>
+        {% else %}
         <span>{{ post.excerpt | markdownify | truncatewords: 30 }}</span>
+        {% endif %}
 
       </li>
+      {% unless forloop.last %}<hr>{% endunless %}
     {% endfor %}
   </ul>
 

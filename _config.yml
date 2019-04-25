@@ -1,23 +1,29 @@
-title: Cayman Blog Theme
-description: Cayman Blog Theme is a clean, responsive blogging theme for Jekyll and Gitlab/GitHub Pages.
-show_downloads: true
+title: optozorax blog
+description: Мои программульки и результаты их работы.
+show_downloads: false
 
-baseurl: "/cayman-blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
-url: "https://lorepirri.github.io" # change this to the base hostname & protocol for your site
+baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+url: "https://optozorax.github.io" # change this to the base hostname & protocol for your site
 
 google_analytics:
 # cayman-blog date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 cayman-blog:
-  date_format: "%b %-d, %Y"
+  date_format: "%d %b %Y"
 
 theme: # leave it empty
 
 # social
-author: "Lore Pirri"
+author: "optozorax"
 image: /thumbnail-jumbo.png
 twitter:
-  username: lorepirri
+  username: optozorax
+vk:
+  group: club169103586
+  user: optozorax
+klavogonki:
+  user: 517589
+
 
 plugins:
   - jekyll-target-blank
