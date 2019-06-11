@@ -5,7 +5,7 @@ tags: программирование фракталы графика круг�
 permalink: apollon-circles-1
 description: "Рисую фрактал, основанный на бесконечном построении касающихся окружностей."
 tagline: Пока просто рисую
-image: assets/apollon-circles/thumbnail.png
+image: /assets/apollon-circles/thumbnail.png
 ---
 
 <img src="/assets/apollon-circles/apollon_1.png" width="500px">
