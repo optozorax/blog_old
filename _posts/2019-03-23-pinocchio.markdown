@@ -5,6 +5,7 @@ tags: рассуждения
 permalink: pinocchio
 description: "Рассуждаю на эту тему. Спойлер: никаких версий аля 'вселенная взорвалась' не будет, логика ставится во главу угла."
 image: /assets/img/pinocchio.jpg
+vk: https://vk.com/optoblog?w=wall-169103586_5
 ---
 
 <img src="/assets/img/pinocchio.jpg" width="500px">

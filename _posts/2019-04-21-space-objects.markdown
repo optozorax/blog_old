@@ -6,6 +6,7 @@ permalink: space-objects
 description: "Статья о новой библиотеке, много красивых картинок, интересного кода, а так же повышение уровня абстракции!"
 toc: true
 image: /assets/space-objects/img/logo.png
+vk: https://vk.com/optoblog?w=wall-169103586_12
 ---
 
 # Введение

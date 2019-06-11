@@ -80,12 +80,30 @@
 
       <!-- Post tagline -->
       {% if page.layout == 'post' %}
-        <h2 class="project-date">
+      {% if page.vk %}
+      <center>
+      <table style="margin-top: 8px;">
+        <tr><td style="padding-right: 10px; border-right: 0px solid #ffffff;">
+      <h2 class="project-date" style="margin-top: 0px;">
+      {% else %}
+      <h2 class="project-date">
+      {% endif %}
         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
           {% assign date_format = site.cayman-blog.date_format | default: "%d %b %Y" %}
           {{ page.date | date: date_format }}
         </time>
         </h2>
+      {% if page.vk %}
+        </td>
+        <td style="padding-left: 10px;">
+          <a href="{{ page.vk }}">
+          <code class="tag">Пост в ВК</code>
+          </a>
+        </td>
+      </tr>
+      </table>
+      </center>
+      {% endif %}
       {% endif %}
       <!-- End: Post tagline -->
     </section>

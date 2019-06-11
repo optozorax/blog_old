@@ -6,6 +6,7 @@ permalink: apollon-circles-1
 description: "Рисую фрактал, основанный на бесконечном построении касающихся окружностей."
 tagline: Пока просто рисую
 image: /assets/apollon-circles/thumbnail.png
+vk: https://vk.com/optoblog?w=wall-169103586_2
 ---
 
 <img src="/assets/apollon-circles/apollon_1.png" width="500px">
