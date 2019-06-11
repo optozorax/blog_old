@@ -13,10 +13,18 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-
+        <table style="border: 0px; table-layout: fixed; width: 100%;"><tr>
+        <td style="border: 0px; padding: 0.2rem; padding-right: 10px;" width="130px">
+        {% if post.image %}
+        <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
+        <img src="{{ post.image }}" style="border: 1px solid #e9ebec; max-width: 110px; max-height: 80px;">
+        </a>
+        {% endif %}
         {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
-
+        </td>
+        <td style="border: 0px; padding: 0.2rem; border-left: 1px solid #e9ebec; padding-left: 10px;">
+        
         <h2>
           <a class="post-link" href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
         </h2>
@@ -26,6 +34,8 @@ layout: default
         {% else %}
         <span>{{ post.excerpt | markdownify | truncatewords: 30 }}</span>
         {% endif %}
+        </td>
+        </tr></table>
 
       </li>
       {% unless forloop.last %}<hr>{% endunless %}

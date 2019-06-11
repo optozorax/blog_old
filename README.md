@@ -8,3 +8,4 @@
 - [iconmonstr](https://iconmonstr.com/) - иконки социальных сетей внизу страницы.
 - [Creating and Hosting a Personal Site on GitHub](http://jmcglone.com/guides/github-pages/) - тоже начальная информация о GitHub Pages, Jekyll.
 - [Как создать полный набор favicon вашего сайта для всех типов устройств](https://pugofka.com/blog/technology/how-to-create-a-complete-set-favicon-on-your-site-for-all-device-types/), [realfavicongenerator.net](https://realfavicongenerator.net) - favicon'ы для всех типов устройств.
+- [Disqus](https://disqus.com/) - комментарии.

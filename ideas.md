@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Идеи
 tagline: У меня их очень много
 permalink: ideas

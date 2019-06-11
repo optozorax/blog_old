@@ -117,7 +117,7 @@
   padding-left: 0px !important;
 
   > li {
-    margin-bottom: $spacing-unit * 1;
+    margin-bottom: $spacing-unit * 0.8;
   }
 
   > li > h2 {
@@ -136,8 +136,9 @@
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
-  float: right;
   display: block;
+  text-align: center;
+  padding-top: 5px;
 }
 
 .post-link {
