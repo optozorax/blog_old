@@ -4,6 +4,7 @@ title: "Что произойдет, если Пиноккио скажет: 'М
 tags: рассуждения
 permalink: pinocchio
 description: "Рассуждаю на эту тему. Спойлер: никаких версий аля 'вселенная взорвалась' не будет, логика ставится во главу угла."
+image: assets/img/pinocchio.jgp
 ---
 
 <img src="/assets/img/pinocchio.jpg" width="500px">
