@@ -2,8 +2,7 @@
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(#{$navbar-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$navbar-width} - (#{$spacing-unit} * 2));
+  max-width: 55rem;
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;
