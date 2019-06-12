@@ -16,6 +16,9 @@ theme: # leave it empty
 # social
 author: "optozorax"
 image: /thumbnail.png
+github:
+  owner_url: https://github.com/optozorax
+  owner_name: optozorax
 twitter:
   username: optozorax
 vk:
@@ -23,6 +26,9 @@ vk:
   user: optozorax
 klavogonki:
   user: 517589
+tg:
+  channel: zoraxblog
+  user: zorax
 
 
 plugins:
