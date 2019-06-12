@@ -50,7 +50,7 @@
 
   @include media-query($on-palm) {
     position: absolute;
-    top: 9px;
+    top: 3px;
     right: $spacing-unit / 2;
     background-color: $background-color;
     border: 1px solid $grey-color-light;
@@ -60,8 +60,8 @@
     label[for="nav-trigger"] {
       display: block;
       float: right;
-      width: 36px;
-      height: 36px;
+      width: 25px;
+      height: 25px;
       z-index: 2;
       cursor: pointer;
     }
@@ -69,10 +69,10 @@
     .menu-icon {
       display: block;
       float: right;
-      width: 36px;
-      height: 26px;
+      width: 25px;
+      height: 25px;
       line-height: 0;
-      padding-top: 10px;
+      padding-top: 5px;
       text-align: center;
 
       > svg path {
@@ -90,17 +90,10 @@
       padding-bottom: 5px;
     }
 
-    .trigger {
-      padding-top: 20px;
-    }
     .page-link {
       display: block;
       padding: 10px 10px;
-
-      &:last-child {
-        margin-bottom: 10px;
-      }
-      margin-right: 10px;
+      margin-right: 10px !important;
       margin-left: 10px;
     }
 
