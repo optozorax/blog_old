@@ -12,6 +12,8 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts %}
+      {% if post.hide %}
+      {% else %}
       <li>
         <table style="border: 0px; table-layout: fixed; width: 100%;"><tr>
         <td style="border: 0px; padding: 0.2rem; padding-right: 10px;" width="130px">
@@ -39,6 +41,7 @@ layout: default
 
       </li>
       {% unless forloop.last %}<hr>{% endunless %}
+      {% endif %}
     {% endfor %}
   </ul>
 
