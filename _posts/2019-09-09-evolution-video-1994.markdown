@@ -6,7 +6,7 @@ permalink: evolved-virtual-creatures
 description: "Привожу источники информации, объясняю как это работает и рассказываю свои идеи."
 toc: true
 image: /assets/img/evolution.png
-vk: TODO
+vk: https://vk.com/optoblog?w=wall-169103586_15
 ---
 
 # Введение
@@ -14,7 +14,7 @@ vk: TODO
 Случайно встретил на просторах интернета этот занимательный видос, и мне он настолько понравился, что я решил поделиться им с русским зрителем: перевести и озвучить. Результат опубликовал на ютуб:
 
 <center>
-`//TODO вставить ссылку на видос`
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2ZJijzzJzWU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 
 Далее я приведу ссылки и немного подробнее расскажу о том, как это работает, расскажу какие идеи у меня возникли после его просмотра.
