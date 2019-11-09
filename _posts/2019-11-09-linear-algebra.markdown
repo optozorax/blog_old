@@ -6,7 +6,7 @@ permalink: linear-algebra
 description: "Рассказываю о системе обозначений, которая упростит понимание линеной алгебры в области векторов."
 toc: false
 image: /assets/img/linear_algebra.png
-vk: 
+vk: https://vk.com/wall-169103586_19
 ---
 
 # Введение
