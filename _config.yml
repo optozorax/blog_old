@@ -36,3 +36,7 @@ plugins:
 
 target-blank:
     rel: nofollow
+
+# deployment
+host: 0.0.0.0
+port: 80

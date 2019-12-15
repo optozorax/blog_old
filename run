@@ -1,1 +1,3 @@
-bundle exec jekyll serve
+#!/bin/bash
+cd /root/optozorax.github.io/
+/root/.rbenv/shims/bundle exec jekyll serve
