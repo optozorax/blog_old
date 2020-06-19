@@ -1,0 +1,109 @@
+---
+layout: post
+title:  "Случайный арт на Rust"
+tags: графика математика rust программирование фракталы
+permalink: random-art-rust
+description: "Показываю как можно при помощи случайности генерировать красивые картинки, и объясняю как это делать на Rust, ориентируясь на самых начинающих."
+toc: false
+image: /assets/arbitrary-nn/arbitrary_nn_white_background.png
+vk: nope
+---
+
+# Введение
+
+В данной статье расскажу как генерировать подобные картинки сначала ручным трудом, а затем и в автоматическом режиме, покажу как сохранять картинки в png на Rust, и научу задавать формулы через деревья.
+
+![](картинка1)
+![](картинка2)
+![](картинка3)
+
+# Установка Rust
+
+Наверняка вы слышите об этом языке впервые, поэтому немного расскажу: это крутой язык программирования со скоростью C++, удобством C# и Kotlin, и очень простым подключением библиотек как в Python. Собственно, благодаря последнему пункту я и считаю, что эта статья будет очень релевантна для новичков.
+
+Если вы на Windows, вам потребуется для начала установить MinGW.
+
+Затем идём на офицальный сайт: [www.rust-lang.org](https://www.rust-lang.org/tools/install), и скачиваем установщик.
+
+После установки запускаем консоль и убеждаемся что всё работает: 
+
+```bash
+$ cargo --version
+cargo 1.42.0 (86334295e 2020-01-31)
+```
+
+# Создаём проект
+
+```
+$ cargo new random-art
+     Created binary (application) `random-art` package
+
+$ cd random-art
+$ cargo run
+   Compiling random-art v0.1.0 (C:\Users\zorax\Мои документы\random-art)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.86s
+     Running `target\debug\random-art.exe`
+Hello, world!
+```
+
+# png
+
+Добавляем в зависимости 
+
+```
+[dependencies]
+png = "0.16.1
+```
+
+Сохранение изображения:
+
+```rust
+fn save_image(name: &str, data: &[u8]) -> Result<(), std::io::Error> {
+	use std::path::Path;
+	use std::fs::File;
+	use std::io::BufWriter;
+
+	let path = Path::new(name);
+	let file = File::create(path)?;
+	let w = &mut BufWriter::new(file);
+
+	let mut encoder = png::Encoder::new(w, 256, 256);
+	encoder.set_color(png::ColorType::Grayscale);
+	encoder.set_depth(png::BitDepth::Eight);
+	let mut writer = encoder.write_header()?;
+
+	writer.write_image_data(&data)?;
+	Ok(())
+}
+```
+
+
+Первое изображение:
+
+```rust
+fn main() {
+	let mut data = vec![0; 256 * 256];
+	data[10 + 10*256] = 255;
+
+	save_image("my_first_image.png", &data).unwrap();
+}
+```
+
+Второе изображение:
+```rust
+fn main() {
+	let mut data: Vec<u8> = vec![0; 256 * 256];
+	
+	for x in 0..256 {
+		for y in 0..256 {
+			let pos = x + y * 256;
+			let value = x * y;
+			data[pos] = value as u8;
+		}
+	}
+
+	save_image("second_image.png", &data).unwrap();
+}
+```
+
+Собственно, это всё. Теперь вам остаётся только задавать самые разные формулы в строке value, и будут получаться разные картинки. Вот примеры для простейших бинарных функций:
