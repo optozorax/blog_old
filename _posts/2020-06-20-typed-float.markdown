@@ -16,25 +16,25 @@ image: /assets/img/typed-float.png
 
 ```js
 function something(a) {
-  if (typeof a === "number") {
-    return a*3 + 2;
-  } else if (typeof a === "string") {
-    return 0;
-  }
+    if (typeof a === "number") {
+        return a*3 + 2;
+    } else if (typeof a === "string") {
+        return 0;
+    }
 }
 ```
 
 ```rust
 fn something(a: f64) -> f64 {
-	if a.is_nan() {
-		0.0
-	} else if !a.is_finite() {
-		1.0
-	} else if a == 0.0 {
-		1.0
-	} else {
-		1 / a.abs()
-	}
+    if a.is_nan() {
+        0.0
+    } else if !a.is_finite() {
+        1.0
+    } else if a == 0.0 {
+        1.0
+    } else {
+        1 / a.abs()
+    }
 }
 ```
 
@@ -52,8 +52,8 @@ fn something(a: f64) -> f64 {
 
 ```rust
 enum Float {
-	NaN,
-	NotNanFloat(NotNanFloat),
+    NaN,
+    NotNanFloat(NotNanFloat),
 }
 
 enum NotNanFloat { /* ... */ }
@@ -83,13 +83,13 @@ let d: NotNanFloat = c.try_into().unwrap();
 
 ```rust
 enum NotNanFloat {
-	InfiniteFloat(InfiniteFloat),
-	FiniteFloat(FiniteFloat),
+    InfiniteFloat(InfiniteFloat),
+    FiniteFloat(FiniteFloat),
 }
 
 enum InfiniteFloat {
-	Negative,
-	Positive,
+    Negative,
+    Positive,
 }
 
 enum FiniteFloat { /* ... */ }
@@ -103,13 +103,13 @@ enum FiniteFloat { /* ... */ }
 
 ```rust
 enum NotNanFloat {
-	PositiveFloat(PositiveFloat),
-	NegativeFloat(NegativeFloat),
+    PositiveFloat(PositiveFloat),
+    NegativeFloat(NegativeFloat),
 }
 
 enum PositiveFloat {
-	Infinity,
-	FinitePositiveFloat(FinitePositiveFloat),
+    Infinity,
+    FinitePositiveFloat(FinitePositiveFloat),
 }
 
 enum FinitePositiveFloat { /* ... */ }
@@ -138,9 +138,9 @@ let b: PositiveFiniteFloat = a.float_unwrap(); // "Can't convert negative float 
 
 ```rust
 fn triangle_area(
-	a: PositiveNonZeroFiniteFloat, 
-	b: PositiveNonZeroFiniteFloat, 
-	c: PositiveNonZeroFiniteFloat,
+    a: PositiveNonZeroFiniteFloat, 
+    b: PositiveNonZeroFiniteFloat, 
+    c: PositiveNonZeroFiniteFloat,
 ) -> Option<PositiveNonZeroFiniteFloat> { /* ... */ }
 // В этой функции возвращается `Option<_>`, потому что в процессе вычислений может возникнуть бесконечность.
 ```
@@ -160,29 +160,29 @@ impl IsFloatParameter for Yes;
 impl IsFloatParameter for No;
 
 struct Float<
-	HasNan: IsFloatParameter,
-	HasNegativeInfinity: IsFloatParameter,
+    HasNan: IsFloatParameter,
+    HasNegativeInfinity: IsFloatParameter,
 
-	HasNegativeFrom1: IsFloatParameter,
-	HasNegative1: IsFloatParameter,
-	HasNegativeFrom0To1: IsFloatParameter,
-	HasNegative0: IsFloatParameter,
+    HasNegativeFrom1: IsFloatParameter,
+    HasNegative1: IsFloatParameter,
+    HasNegativeFrom0To1: IsFloatParameter,
+    HasNegative0: IsFloatParameter,
 
-	HasPositive0: IsFloatParameter,
-	HasPositiveFrom0To1: IsFloatParameter,
-	HasPositive1: IsFloatParameter,
-	HasPositiveFrom1: IsFloatParameter,
+    HasPositive0: IsFloatParameter,
+    HasPositiveFrom0To1: IsFloatParameter,
+    HasPositive1: IsFloatParameter,
+    HasPositiveFrom1: IsFloatParameter,
 
-	HasPositiveInfinity: IsFloatParameter,
+    HasPositiveInfinity: IsFloatParameter,
 >(f64);
 
 type NotNanFloat = Float<
-	No, 
+    No, 
 
-	Yes, 
-	Yes, Yes, Yes, Yes, 
-	Yes, Yes, Yes, Yes, 
-	Yes,
+    Yes, 
+    Yes, Yes, Yes, Yes, 
+    Yes, Yes, Yes, Yes, 
+    Yes,
 >;
 ```
 
