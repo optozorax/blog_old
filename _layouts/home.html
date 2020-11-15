@@ -11,7 +11,10 @@ layout: default
   <div>&nbsp;</div>
 
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% assign pages_posts = site.pages | where: "submodule", true %}
+    {% assign concatted_posts = site.posts | concat: pages_posts %}
+    {% assign result_posts = concatted_posts | sort_natural: "date" | reverse %}
+    {% for post in result_posts %}
       {% if post.hide %}
       {% else %}
       <li>
@@ -22,7 +25,7 @@ layout: default
         <img src="{{ post.image }}" style="border: 1px solid #e9ebec; max-width: 110px; max-height: 80px;">
         </a>
         {% endif %}
-        {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
+        {% assign date_format = "%d %b %Y" %}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         </td>
         <td style="border: 0px; padding: 0.2rem; border-left: 1px solid #e9ebec; padding-left: 10px;">

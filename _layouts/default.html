@@ -93,7 +93,7 @@
       <h2 class="project-date">
       {% endif %}
         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-          {% assign date_format = site.cayman-blog.date_format | default: "%d %b %Y" %}
+          {% assign date_format = "%d %b %Y" %}
           {{ page.date | date: date_format }}
         </time>
         </h2>
@@ -110,6 +110,10 @@
       {% endif %}
       {% endif %}
       <!-- End: Post tagline -->
+
+      {% if page.github %}
+          <br><a href="{{ page.github }}" class="btn" style="margin: 0px;">Эта страница на GitHub</a>
+      {% endif %}
     </section>
 
     <section class="main-content">

@@ -15,7 +15,7 @@ layout: default
       {% endif %}</p>
   </header> -->
 
-  <div itemprop="articleBody">
+  <div itemprop="articleBody" id="content">
     {% if page.toc %}
     <h1>Содержание</h1>
     {% include toc.html html=content %}
@@ -23,6 +23,32 @@ layout: default
     {% endif %}
     {{ content }}
   </div>
+  {% if page.submodule %}
+  <script>
+    function fixer() {
+      return function(img) {
+        return function() {
+          if (img.trying_to_fix === undefined) {
+            var url = new URL(img.src);
+            console.log("[SUBMODULES FIXER] Trying to fix img: " + url);
+            img.src = "{{ page.thisname }}" + url.pathname;
+            img.trying_to_fix = true;
+          } else {
+            console.log("[SUBMODULES FIXER] Unable to fix: " + img.src);
+          }
+        };
+      };
+    }
+    var collection = document.getElementById("content").getElementsByTagName("img");
+    for (var i = 0; i < collection.length; i++) {
+      var item = collection.item(i);
+      var url = new URL(item.src);
+      if (url.host === window.location.host) {
+        item.addEventListener('error', fixer()(item));
+      }
+    }
+  </script>
+  {% endif %}
 </article>
 </section>
 <div style="height: 20px;"></div>

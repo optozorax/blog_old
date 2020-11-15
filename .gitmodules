@@ -1,0 +1,39 @@
+[submodule "submodules/4D"]
+	path = submodules/4D
+	url = https://github.com/optozorax/4D
+[submodule "submodules/emergevolution"]
+	path = submodules/emergevolution
+	url = https://github.com/optozorax/emergevolution
+[submodule "submodules/hyperbolic"]
+	path = submodules/hyperbolic
+	url = https://github.com/optozorax/hyperbolic
+[submodule "submodules/keyboard_layout"]
+	path = submodules/keyboard_layout
+	url = https://github.com/optozorax/keyboard_layout
+[submodule "submodules/math-formulas"]
+	path = submodules/math-formulas
+	url = https://github.com/optozorax/math-formulas
+[submodule "submodules/portals_opengl"]
+	path = submodules/portals_opengl
+	url = https://github.com/optozorax/portals_opengl
+[submodule "submodules/portals_tracing"]
+	path = submodules/portals_tracing
+	url = https://github.com/optozorax/portals_tracing
+[submodule "submodules/sun-eclipses"]
+	path = submodules/sun-eclipses
+	url = https://github.com/optozorax/sun-eclipses
+[submodule "submodules/std-function-article"]
+	path = submodules/std-function-article
+	url = https://github.com/optozorax/std-function-article
+[submodule "submodules/ray-tracing"]
+	path = submodules/ray-tracing
+	url = https://github.com/optozorax/ray-tracing
+[submodule "submodules/fast_tree_point_in_polygon"]
+	path = submodules/fast_tree_point_in_polygon
+	url = https://github.com/optozorax/fast_tree_point_in_polygon
+[submodule "submodules/net-creater"]
+	path = submodules/net-creater
+	url = https://github.com/optozorax/net-creater
+[submodule "submodules/university_latex_template"]
+	path = submodules/university_latex_template
+	url = https://github.com/optozorax/university_latex_template
