@@ -71,7 +71,7 @@ a {
 
   @include medium {
     padding: 0.6rem 0.9rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   @include small {
@@ -161,8 +161,8 @@ a {
 
 .tag {
   padding: 2px 4px;
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 0.7rem;
+  font-family: JetBrains Mono, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.8rem;
   color: $code-text-color;
   background-color: $code-bg-color;
   border-radius: 0.3rem;
@@ -181,13 +181,13 @@ a {
     max-width: 55rem;
     padding: 1rem 2rem;
     margin: 0 auto;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     box-shadow: 0 0 50px rgba(0,0,0,0.1);
   }
 
   @include medium {
     padding: 1rem 1rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   @include small {
@@ -221,8 +221,8 @@ a {
 
   code {
     padding: 2px 4px;
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 0.7rem;
+    font-family: JetBrains Mono, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 0.8rem;
     color: $code-text-color;
     background-color: $code-bg-color;
     border-radius: 0.3rem;
@@ -235,7 +235,7 @@ a {
   }
 
   pre {
-    padding: 0.8rem;
+    padding: 0.9rem;
     margin-top: 0;
     margin-bottom: 1rem;
     font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
@@ -248,7 +248,7 @@ a {
     > code {
       padding: 0;
       margin: 0;
-      font-size: 0.7rem;
+      font-size: 0.9rem;
       color: $code-text-color;
       word-break: normal;
       white-space: pre;
@@ -270,7 +270,7 @@ a {
   pre {
     padding: 0.8rem;
     overflow: auto;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     line-height: 1.1;
     border-radius: 0.3rem;
     -webkit-overflow-scrolling: touch;
@@ -425,4 +425,19 @@ a {
 
   } // social-icons
 
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: normal;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border-bottom-color: #d1d5da;
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
 }

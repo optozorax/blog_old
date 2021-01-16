@@ -37,3 +37,6 @@
 [submodule "submodules/university_latex_template"]
 	path = submodules/university_latex_template
 	url = https://github.com/optozorax/university_latex_template
+[submodule "submodules/moonlander"]
+	path = submodules/moonlander
+	url = https://github.com/optozorax/moonlander

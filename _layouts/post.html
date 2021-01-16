@@ -47,6 +47,34 @@ layout: default
         item.addEventListener('error', fixer()(item));
       }
     }
+
+    changeTag("youtube", "iframe");
+
+    function changeTag(class_, newtag) {
+      let collection = document.getElementsByClassName(class_);
+      for (var i = 0; i < collection.length; i++) {
+        var item = collection.item(i);
+        // Thank you Barney Carroll, https://jsfiddle.net/barney/kDjuf/
+        // Grab the original element
+        var original    = item;
+        // Create a replacement tag of the desired type
+        var replacement = document.createElement(newtag);
+
+        // Grab all of the original's attributes, and pass them to the replacement
+        for(var i = 0, l = original.attributes.length; i < l; ++i){
+          var nodeName  = original.attributes.item(i).nodeName;
+          var nodeValue = original.attributes.item(i).nodeValue;
+
+          replacement.setAttribute(nodeName, nodeValue);
+        }
+
+        // Persist contents
+        replacement.innerHTML = original.innerHTML;
+
+        // Switch!
+        original.parentNode.replaceChild(replacement, original);
+      }
+    }
   </script>
   {% endif %}
 </article>
