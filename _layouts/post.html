@@ -66,17 +66,30 @@ layout: default
       }
     }
 
-    document.addEventListener("DOMContentLoaded", function(){
+    function fixAll() {
       var collection = document.getElementById("content").getElementsByTagName("img");
       for (var i = 0; i < collection.length; i++) {
         var item = collection.item(i);
         var url = new URL(item.src);
         if (url.host === window.location.host) {
           item.addEventListener('error', fixer()(item));
+          if (item.complete) {
+            fixer()(item)();
+          }
         }
       }
 
       changeTag("youtube", "iframe");
+    }
+
+    fixAll();
+
+    document.addEventListener("DOMContentLoaded", function(){
+      fixAll();
+    });
+
+    document.addEventListener("load", function(){
+      fixAll();
     });
   </script>
   {% endif %}
