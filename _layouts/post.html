@@ -39,17 +39,7 @@ layout: default
         };
       };
     }
-    var collection = document.getElementById("content").getElementsByTagName("img");
-    for (var i = 0; i < collection.length; i++) {
-      var item = collection.item(i);
-      var url = new URL(item.src);
-      if (url.host === window.location.host) {
-        item.addEventListener('error', fixer()(item));
-      }
-    }
-
-    changeTag("youtube", "iframe");
-
+    
     function changeTag(class_, newtag) {
       let collection = document.getElementsByClassName(class_);
       for (var i = 0; i < collection.length; i++) {
@@ -75,6 +65,19 @@ layout: default
         original.parentNode.replaceChild(replacement, original);
       }
     }
+
+    document.addEventListener("DOMContentLoaded", function(){
+      var collection = document.getElementById("content").getElementsByTagName("img");
+      for (var i = 0; i < collection.length; i++) {
+        var item = collection.item(i);
+        var url = new URL(item.src);
+        if (url.host === window.location.host) {
+          item.addEventListener('error', fixer()(item));
+        }
+      }
+
+      changeTag("youtube", "iframe");
+    });
   </script>
   {% endif %}
 </article>
