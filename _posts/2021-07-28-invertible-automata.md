@@ -76,7 +76,7 @@ image: /assets/invertible-automata/img/1_both.png
 
 <center>
 <div class="container">
-<div class="automata-col trivial trivial_two time_symmetricale self_mirror self_inverse save_count">
+<div class="automata-col trivial trivial_two time_symmetricale anti_time_symmetricale self_mirror self_inverse save_count">
 <span class="automata-name"><b>0</b></span><br>
 <img class="pixelated skip-img" src="/assets/invertible-automata/img/0_skip.png">
 <img class="pixelated both-img" src="/assets/invertible-automata/img/0_both.png">
@@ -88,7 +88,7 @@ image: /assets/invertible-automata/img/1_both.png
 <img class="pixelated both-img" src="/assets/invertible-automata/img/1_both.png">
 <span class="automata-name">[0 1 3 2]</span>
 </div>
-<div class="automata-col time_symmetricale self_mirror self_inverse save_count">
+<div class="automata-col time_symmetricale anti_time_symmetricale self_mirror self_inverse save_count">
 <span class="automata-name"><b>2</b></span><br>
 <img class="pixelated skip-img" src="/assets/invertible-automata/img/2_skip.png">
 <img class="pixelated both-img" src="/assets/invertible-automata/img/2_both.png">
@@ -118,7 +118,7 @@ image: /assets/invertible-automata/img/1_both.png
 <img class="pixelated both-img" src="/assets/invertible-automata/img/6_both.png">
 <span class="automata-name">[1 0 2 3]</span>
 </div>
-<div class="automata-col trivial_two time_symmetricale self_inverse">
+<div class="automata-col trivial_two time_symmetricale anti_time_symmetricale self_inverse">
 <span class="automata-name"><b>7</b></span><br>
 <img class="pixelated skip-img" src="/assets/invertible-automata/img/7_skip.png">
 <img class="pixelated both-img" src="/assets/invertible-automata/img/7_both.png">
@@ -130,7 +130,7 @@ image: /assets/invertible-automata/img/1_both.png
 <img class="pixelated both-img" src="/assets/invertible-automata/img/8_both.png">
 <span class="automata-name">[1 2 0 3]</span>
 </div>
-<div class="automata-col">
+<div class="automata-col anti_time_symmetricale">
 <span class="automata-name"><b>9</b></span><br>
 <img class="pixelated skip-img" src="/assets/invertible-automata/img/9_skip.png">
 <img class="pixelated both-img" src="/assets/invertible-automata/img/9_both.png">
@@ -172,19 +172,19 @@ image: /assets/invertible-automata/img/1_both.png
 <img class="pixelated both-img" src="/assets/invertible-automata/img/15_both.png">
 <span class="automata-name">[2 1 3 0]</span>
 </div>
-<div class="automata-col trivial_two time_symmetricale self_inverse">
+<div class="automata-col trivial_two time_symmetricale anti_time_symmetricale self_inverse">
 <span class="automata-name"><b>16</b></span><br>
 <img class="pixelated skip-img" src="/assets/invertible-automata/img/16_skip.png">
 <img class="pixelated both-img" src="/assets/invertible-automata/img/16_both.png">
 <span class="automata-name">[2 3 0 1]</span>
 </div>
-<div class="automata-col">
+<div class="automata-col anti_time_symmetricale">
 <span class="automata-name"><b>17</b></span><br>
 <img class="pixelated skip-img" src="/assets/invertible-automata/img/17_skip.png">
 <img class="pixelated both-img" src="/assets/invertible-automata/img/17_both.png">
 <span class="automata-name">[2 3 1 0]</span>
 </div>
-<div class="automata-col">
+<div class="automata-col anti_time_symmetricale">
 <span class="automata-name"><b>18</b></span><br>
 <img class="pixelated skip-img" src="/assets/invertible-automata/img/18_skip.png">
 <img class="pixelated both-img" src="/assets/invertible-automata/img/18_both.png">
@@ -202,19 +202,19 @@ image: /assets/invertible-automata/img/1_both.png
 <img class="pixelated both-img" src="/assets/invertible-automata/img/20_both.png">
 <span class="automata-name">[3 1 0 2]</span>
 </div>
-<div class="automata-col time_symmetricale self_mirror self_inverse save_count">
+<div class="automata-col time_symmetricale anti_time_symmetricale self_mirror self_inverse save_count">
 <span class="automata-name"><b>21</b></span><br>
 <img class="pixelated skip-img" src="/assets/invertible-automata/img/21_skip.png">
 <img class="pixelated both-img" src="/assets/invertible-automata/img/21_both.png">
 <span class="automata-name">[3 1 2 0]</span>
 </div>
-<div class="automata-col">
+<div class="automata-col anti_time_symmetricale">
 <span class="automata-name"><b>22</b></span><br>
 <img class="pixelated skip-img" src="/assets/invertible-automata/img/22_skip.png">
 <img class="pixelated both-img" src="/assets/invertible-automata/img/22_both.png">
 <span class="automata-name">[3 2 0 1]</span>
 </div>
-<div class="automata-col trivial trivial_two time_symmetricale self_mirror self_inverse save_count">
+<div class="automata-col trivial trivial_two time_symmetricale anti_time_symmetricale self_mirror self_inverse save_count">
 <span class="automata-name"><b>23</b></span><br>
 <img class="pixelated skip-img" src="/assets/invertible-automata/img/23_skip.png">
 <img class="pixelated both-img" src="/assets/invertible-automata/img/23_both.png">
@@ -250,6 +250,9 @@ image: /assets/invertible-automata/img/1_both.png
 <label><input type="radio" name="prop" value="time_symmetricale" />
 Одинаковые законы для симуляции назад и вперёд во времени</label><br>
 
+<label><input type="radio" name="prop" value="anti_time_symmetricale" />
+Правило для симуляции назад во времени равно текущему с инвертированными цветами</label><br>
+
 <label><input type="radio" name="prop" value="self_inverse" />
 Инвертирование цвета правил приводит к самому себе</label><br>
 </form>
@@ -264,10 +267,13 @@ image: /assets/invertible-automata/img/1_both.png
 
 **Одинаковые законы для симуляции назад и вперёд во времени** — мне кажется это свойство аналогично [T-симметрии](https://ru.wikipedia.org/wiki/T-%D1%81%D0%B8%D0%BC%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D1%8F), хотя я не знаю насколько справедливо проводить такие аналогии. К ним относится треугольный `1` и порождаемые им (далее мы увидим это).
 
+**Правило для симуляции назад во времени равно текущему с инвертированными цветами** — то же самое, что и предыдущее, только инвертированное. Это свойство интересно, ведь Криттеры именно такими и являются. То есть если в криттерах инвертировать всё поле, то там будут возникать глайдеры, состоящие не из заполненных клеток, а из пустых клеток, и эти глайдеры будут двигаться назад во времени, а не вперёд.
+
 **Инвертирование цвета правил приводит к самому себе** — тут интересны автоматы `10` и `13`, потому что другими особыми свойствами они не обладают.
 
 Давайте соберём список нетривиальных автоматов, которые обладают своим уникальным свойством:
 * `{1, 5, 6, 14}` не различают направление времени.
+* `{9, 17, 18, 22}` двигаются назад во времени для инвертированных цветов.
 * `{2, 21}` не различают лево и право.
 * `{10, 13}` не различают белый и чёрный.
 
