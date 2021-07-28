@@ -118,7 +118,7 @@ image: /assets/invertible-automata/img/1_both.png
 <img class="pixelated both-img" src="/assets/invertible-automata/img/6_both.png">
 <span class="automata-name">[1 0 2 3]</span>
 </div>
-<div class="automata-col trivial_two time_symmetricale self_inverse save_count">
+<div class="automata-col trivial_two time_symmetricale self_inverse">
 <span class="automata-name"><b>7</b></span><br>
 <img class="pixelated skip-img" src="/assets/invertible-automata/img/7_skip.png">
 <img class="pixelated both-img" src="/assets/invertible-automata/img/7_both.png">
@@ -172,7 +172,7 @@ image: /assets/invertible-automata/img/1_both.png
 <img class="pixelated both-img" src="/assets/invertible-automata/img/15_both.png">
 <span class="automata-name">[2 1 3 0]</span>
 </div>
-<div class="automata-col trivial_two time_symmetricale self_inverse save_count">
+<div class="automata-col trivial_two time_symmetricale self_inverse">
 <span class="automata-name"><b>16</b></span><br>
 <img class="pixelated skip-img" src="/assets/invertible-automata/img/16_skip.png">
 <img class="pixelated both-img" src="/assets/invertible-automata/img/16_both.png">
