@@ -195,7 +195,7 @@ a {
     font-size: 0.9rem;
   }
 
-  img {
+  img:not(.third-image, .half-image) {
     max-width: 90%;
     display: block;
     margin-left: auto;
