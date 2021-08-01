@@ -31,9 +31,9 @@ tagline: "Архив всех постов, отсортированных по 
   <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
   <ul class="posts">
     {% if site.tags contains this_word %}
-      {% for post in site.tags[this_word] %}{% if post.title != null %}
+      {% for post in site.tags[this_word] %}{% if post.title != null %}{% unless post.hide %}
       <li itemscope><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endif %}{% endfor %}
+      {% endunless %}{% endif %}{% endfor %}
     {% endif %}
     {% for page in submodules %}
       {% if page.tags contains this_word %}
