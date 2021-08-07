@@ -84,7 +84,7 @@
 
       <!-- Post tagline -->
       {% if page.layout == 'post' %}
-      {% if page.vk %}
+      {% if page.vk or page.tg %}
       <center>
       <table style="margin-top: 8px;">
         <tr><td style="padding-right: 10px; border-right: 0px solid #ffffff;">
@@ -97,12 +97,22 @@
           {{ page.date | date: date_format }}
         </time>
         </h2>
-      {% if page.vk %}
+      {% if page.vk or page.tg %}
         </td>
         <td style="padding-left: 10px;">
+          {% if page.vk %}
           <a href="{{ page.vk }}">
           <code class="tag">Пост в ВК</code>
           </a>
+          {% endif %}
+          {% if page.tg %}
+          <a href="{{ page.tg }}">
+          <code class="tag">Пост в Telegram</code>
+          </a>
+          {% endif %}
+          {% if page.tg_comments %}
+          ({{ page.tg_comments }} 💬)
+          {% endif %}
         </td>
       </tr>
       </table>

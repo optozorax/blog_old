@@ -7,6 +7,8 @@ description: "Делаем такое возможным с помощью `git 
 tagline: "Делаем такое возможным с помощью `git submodules` на Jekyll + GitHub Pages."
 toc: false
 image: /assets/img/jekyll.png
+tg: https://t.me/optozorax_dev/263
+tg_comments: 3
 ---
 
 # Что я сделал?

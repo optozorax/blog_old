@@ -7,6 +7,8 @@ description: "Как эта программа работает, почему я
 tagline: "Как эта программа работает, почему я её сделал и в чём её преимущества перед другими."
 image: /assets/learn-words-post/full.png
 hide: false
+tg: https://t.me/optozorax_dev/489
+tg_comments: 37 
 ---
 
 <style type="text/css">

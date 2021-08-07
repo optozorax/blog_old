@@ -6,6 +6,7 @@ permalink: typed-float
 description: "Почему работа с вещественными числами приносит столько страданий и безумная идея как это улучшить при помощи новых типов данных."
 toc: false
 image: /assets/img/typed-float.png
+tg: https://t.me/optozorax_dev/226
 ---
 
 # Введение

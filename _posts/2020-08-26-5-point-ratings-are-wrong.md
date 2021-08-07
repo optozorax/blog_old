@@ -7,6 +7,7 @@ description: "Весь мир снова ошибается, и у меня сн
 tagline: "Весь мир снова ошибается, и у меня снова есть великолепное решение."
 toc: false
 image: /assets/img/symmetric-marks.png
+tg: https://t.me/optozorax_dev/287
 ---
 
 # Конфликт
