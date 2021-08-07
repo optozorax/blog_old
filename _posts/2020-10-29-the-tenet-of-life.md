@@ -71,8 +71,9 @@ tg_comments: 29
 В прошлом посте про Critters я не осилил управление мышью, поэтому там были очень шакальные картинки, и вы даже не смогли рассмотреть глайдера. Чтож, я исправил это недоразумение, теперь я сделал управление мышью и можно масштабировать, передвигать. И ещё интерфейс есть вместо клавиш на клавиатуре.
 
 <video class="video-gif" controls>
-  <source src="/assets/the-tenet-of-life/article_1.webm" type="video/webm">
   <source src="/assets/the-tenet-of-life/article_1.mp4" type="video/mp4">
+  <source src="/assets/the-tenet-of-life/article_1.ogg" type="video/ogg">
+  Ваш браузер не поддерживает проигрывание видео.
 </video>
 
 ---
@@ -80,8 +81,9 @@ tg_comments: 29
 Это глайдер в обычном автомате Critters. Так как он синего цвета, видно что он идёт вперёд во времени. Здесь показывается как этот глайдер двигается в направлении куда он указывает. Так же здесь показывается сетка, чтобы можно было видеть как работают блочные правила обычного Critters, о которых я ранее рассказывал.
 
 <video class="video-gif" controls>
-  <source src="/assets/the-tenet-of-life/article_2.webm" type="video/webm">
   <source src="/assets/the-tenet-of-life/article_2.mp4" type="video/mp4">
+  <source src="/assets/the-tenet-of-life/article_2.ogg" type="video/ogg">
+  Ваш браузер не поддерживает проигрывание видео.
 </video>
 
 ---
@@ -89,8 +91,9 @@ tg_comments: 29
 А здесь одновременно два глайдера с разными направлениями времени. Красный глайдер указывает влево, но идёт вправо, потому что он обращён во времени. И вообще эта гифка немного напоминает сцену из фильма с машинами) Я думаю это сделать логотипом моего автомата.
 
 <video class="video-gif" controls>
-  <source src="/assets/the-tenet-of-life/article_3.webm" type="video/webm">
   <source src="/assets/the-tenet-of-life/article_3.mp4" type="video/mp4">
+  <source src="/assets/the-tenet-of-life/article_3.ogg" type="video/ogg">
+  Ваш браузер не поддерживает проигрывание видео.
 </video>
 
 ---
@@ -98,8 +101,9 @@ tg_comments: 29
 А тут просто куча клеток разных времён как-то взаимодействуют...
 
 <video class="video-gif" controls>
-  <source src="/assets/the-tenet-of-life/article_4.webm" type="video/webm">
   <source src="/assets/the-tenet-of-life/article_4.mp4" type="video/mp4">
+  <source src="/assets/the-tenet-of-life/article_4.ogg" type="video/ogg">
+  Ваш браузер не поддерживает проигрывание видео.
 </video>
 
 ---
