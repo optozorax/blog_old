@@ -169,7 +169,6 @@ a {
   font-size: 0.9rem;
   line-height: 1.6rem;
 }
-
 .main-content {
   word-wrap: break-word;
 
@@ -195,7 +194,7 @@ a {
     font-size: 0.9rem;
   }
 
-  img:not(.third-image, .half-image) {
+  img:not(.third-image):not(.half-image) {
     max-width: 90%;
     display: block;
     margin-left: auto;
