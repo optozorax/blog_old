@@ -34,6 +34,10 @@ body {
   color: $body-text-color;
 }
 
+iframe {
+  max-width: 99%;
+}
+
 a {
   color: $body-link-color;
   text-decoration: none;
