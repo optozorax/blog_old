@@ -362,6 +362,8 @@ struct WordsSaved(BTreeMap<String, Vec<WordStatus>>);
 </div>
 </details>
 
+Тут стоит отвлечься насчёт того как я веду todo-списки. Одни люди это делают через GitHub, другие через приложение на телефон, а я через расширение для текстового редактора. Я пишу в Sublime + [PlainTasks](https://packagecontrol.io/packages/PlainTasks), так же есть похожее расширение для VSCode: [Todo+](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-todo-plus).
+
 Учтите, что этот файл выглядит очень хорошо только в Sublime + PlainTasks, от markdown здесь никакого форматирования к сожалению не делается.
 
 Теперь далее можно реализовывать по одному пунктику и сразу видеть результат.
