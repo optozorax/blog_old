@@ -92,13 +92,68 @@ summary:before {
   border-top: none;
   border-radius: 0px 0px 5px 5px;
 }
-
 summary .right {
   background-color: #f3f6fa;
   border-radius: 0.3rem;
   padding: 0px 4px;
   position: absolute;
   right: 5px;
+}
+
+.container { 
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  padding: 10px;
+  margin: 5px;
+}
+.half-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2px;
+  padding: 2px;
+  border-radius: 5px;
+}
+@media only screen and (min-width:501px) {
+  .half-image {
+    max-width: 50%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .half-image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+.third-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2px;
+  padding: 2px;
+  border-radius: 5px;
+}
+@media only screen and (min-width:851px) {
+  .third-image {
+    max-width: 31%;
+    height: auto;
+  }
+}
+@media only screen and (min-width:501px) and (max-width: 850px) {
+  .third-image {
+    max-width: 48%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .third-image {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .btn {
@@ -260,7 +315,7 @@ summary .right {
     font-size: 0.9rem;
   }
 
-  img:not(.third-image):not(.half-image) {
+  img:not(.third-image):not(.half-image):not(.gallery-img):not(.cursor) {
     max-width: 90%;
     display: block;
     margin-left: auto;

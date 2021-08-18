@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for i in `echo original/*.mp4`;
+do
+    r=${i##*/}
+    r=${r%.*}
+    ffmpeg -i original/$r.mp4 -c:v libx264 -pix_fmt yuv420p -profile:v baseline -level 3.0 -crf 35 -preset veryslow -vf "scale=iw*min(1\,1280/iw):(floor((ow/dar)/2))*2" -an -movflags +faststart -threads 0 optimized/$r.mp4
+done
