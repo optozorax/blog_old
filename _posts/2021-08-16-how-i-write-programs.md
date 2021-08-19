@@ -8,6 +8,7 @@ tagline: "Рассказываю об этом на двух примерах. �
 image: /assets/how-i-write-programs/preview.png
 hide: false
 tg: https://t.me/optozorax_dev/493
+tg_comments: 209
 ---
 
 # Введение
